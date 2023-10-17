@@ -6,24 +6,24 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('Hashing.csv')
 
 # Group the data by load factor and hashing type
-grouped = df.groupby(['Load-Factor', 'Hashing-type', 'Search-type'])
+grouped = df.groupby(['Load-Factor', 'Hashing-type'])
 
 # Calculate the mean search count for each group
 result = grouped['Search-count'].mean().reset_index()
 
-# Create a pivot table to separate successful and unsuccessful searches
-pivot_table = result.pivot_table(index=['Load-Factor', 'Hashing-type'], columns='Search-type', values='Search-count')
+# Create a pivot table to separate hashing techniques
+pivot_table = result.pivot_table(index='Load-Factor', columns='Hashing-type', values='Search-count')
 
 # Create a bar plot for different hashing techniques and load factors
-pivot_table.plot(kind='bar', stacked=True, figsize=(10, 6))
+pivot_table.plot(kind='bar', figsize=(10, 6))
 
 # Set plot labels and title
-plt.xlabel('Load Factor, Hashing Technique')
+plt.xlabel('Load Factor')
 plt.ylabel('Average Search Count')
 plt.title('Analysis of Hashing Techniques with Different Load Factors')
 
-# Show the legend
-plt.legend(title='Search Type')
+# Show the plot
+plt.legend(title='Hashing Technique')
 
 # Show the plot
 plt.show()
