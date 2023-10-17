@@ -178,7 +178,7 @@ int main()
     {
         fprintf(stderr, "%s\n", "File is not found");
     }
-    fprintf(fptr, "%s,%s,%s,%s\n", "Load-Factor", "Hashing-type", "Search-type", "Search-count");
+    fprintf(fptr, "%s,%s,%s\n", "Load-Factor", "Hashing-type", "Search-count");
     float load_factor[4] = {0.25, 0.5, 0.75, 1};
     srand(time(0));
     int *random_arr = (int *)calloc(size, sizeof(int));
