@@ -40,6 +40,7 @@ Install these libraries using pip:
 
 ```bash
 pip install pandas numpy matplotlib
+```
 #Plotted Graph-
 ![hashing](https://github.com/ankanmitra2002/Hashing_Techniques/assets/136356039/30045c96-7a0e-4b63-a361-472c765da2d1)
 
