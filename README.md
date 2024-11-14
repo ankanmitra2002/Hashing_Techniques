@@ -1,5 +1,3 @@
-# Content for the README
-readme_content = """
 # Hashing Techniques Analysis
 
 This project implements and analyzes various hashing techniques in C and provides visual insights into their performance at different load factors using bar plots.
